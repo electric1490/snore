@@ -8,7 +8,8 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 
 ## Upgrade pip first. Also make sure wheel is installed.
 ``sudo apt-get install python3-pip -y``\
-``sudo apt-get install git -y``
+``sudo apt-get install git -y``\
+``sudo apt-get install portaudio19-dev -y``\
 
 ## Create Virtual Environment
 ``python -m venv snoreappENV``\
@@ -23,13 +24,14 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 
 ## Clone TensorFlow models repo into a 'models' directory.
 ``deactivate`` turns off the virtual environment\
+``git clone https://github.com/electric1490/snore.git``\
 ``git clone https://github.com/tensorflow/models.git`` this is a large file directly downloading the models from google\
 ``cd models/research/audioset/yamnet``\
 
 ## Download data file into same directory as code.
 ``curl -O https://storage.googleapis.com/audioset/yamnet.h5``
 
-## Installation ready, let's test it.
+## Core Tensorflow application now ready for testing.
 ``cd`` leave the yamnet folder\
 ``source snoreappENV/bin/activate`` reactivate the virtual environment\
 ``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
@@ -38,9 +40,12 @@ If we see "Ran 4 tests ... OK ...", then we're all set.\
 if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras using ``pip3 install tf-keras``
 
 ## Now let's install the other elements needed to run the snore app
-pip3 install discord-webhook (appears to be version 1.3.1)
-pip3 install pyaudio (appears to be version 0.2.14)
-pip3 install matplotlib (appears to be version 3.10.0)
-pip3 install librosa (appears to be version 0.10.2)
+``pip3 install discord-webhook`` (appears to be version 1.3.1)\
+``pip3 install pyaudio`` (appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev)\
+``pip3 install matplotlib`` (appears to be version 3.10.0)\
+``pip3 install librosa`` (appears to be version 0.10.2)\
 
+## Lets add in the custom python files for the app
+``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
+``curl -O https://github.com/electric1490/snore/blob/bc3f2c306e326163cbf1e2aebc5309704ebb3f3f/yamnet_realtime_engine.py``
 Load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed. 
