@@ -7,9 +7,9 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``sudo reboot now``
 
 ### Upgrade pip first. Also make sure wheel is installed.
-``sudo apt-get install python3-pip -y\
-sudo apt-get install git -y\
-sudo apt-get install portaudio19-dev -y``
+``sudo apt-get install python3-pip -y``\
+``sudo apt-get install git -y``\
+``sudo apt-get install portaudio19-dev -y``
 
 ### Create Virtual Environment
 ``python -m venv snoreappENV``\
