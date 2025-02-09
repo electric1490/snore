@@ -8,7 +8,7 @@ sudo reboot
 # Upgrade pip first. Also make sure wheel is installed.
 python -m pip install --upgrade pip wheel
 
-# Install dependences.
+Install dependences.
 pip install numpy resampy tensorflow soundfile
 
 # Clone TensorFlow models repo into a 'models' directory.
