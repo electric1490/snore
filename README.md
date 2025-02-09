@@ -8,6 +8,7 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 
 ## Upgrade pip first. Also make sure wheel is installed.
 ``sudo apt-get install python3-pip -y``
+``sudo apt-get install git -y``
 
 ## Create Virtual Environment
 ``python -m venv snoreappENV``\
@@ -20,7 +21,8 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``pip3 install soundfile`` (appears to be version 0.13.1)
 
 # Clone TensorFlow models repo into a 'models' directory.
-git clone https://github.com/tensorflow/models.git
+``deactivate`` turns off the virtual environment
+``git clone https://github.com/tensorflow/models.git``
 cd models/research/audioset/yamnet
 # Download data file into same directory as code.
 curl -O https://storage.googleapis.com/audioset/yamnet.h5
