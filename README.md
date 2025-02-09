@@ -37,6 +37,7 @@ Can also be: ``pip3 install numpy resampy tensorflow soundfile tf-keras``
 ``source snoreappENV/bin/activate`` reactivate the virtual environment\
 ``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
 ``python yamnet_test.py`` run this to determine if working\
+\
 If we see "Ran 4 tests ... OK ...", then we're all set.\
 if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras using ``pip3 install tf-keras``
 
