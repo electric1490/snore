@@ -6,14 +6,14 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``sudo apt-get upgrade (need to elect 'Y')``\
 ``sudo reboot now``
 
-# Upgrade pip first. Also make sure wheel is installed.
+## Upgrade pip first. Also make sure wheel is installed.
 ``sudo apt-get install python3-pip -y``
 
-# Create Virtual Environment
+## Create Virtual Environment
 ``python -m venv snoreappENV``\
 ``source snoreappENV/bin/activate``
 
-# Install dependences.
+## Install dependences.
 ``pip3 install numpy`` (appears to be version 2.0.2) (installed at 2.2.2)\
 ``pip3 install resampy`` (appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)\
 ``pip3 install tensorflow`` (appears to be version 2.18.0) (installs numpy at 2.0.2)\
