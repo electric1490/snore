@@ -18,7 +18,8 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``pip3 install numpy`` (appears to be version 2.0.2) (installed at 2.2.2)\
 ``pip3 install resampy`` (appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)\
 ``pip3 install tensorflow`` (appears to be version 2.18.0) (installs numpy at 2.0.2)\
-``pip3 install soundfile`` (appears to be version 0.13.1)
+``pip3 install soundfile`` (appears to be version 0.13.1)\
+``pip3 install tf-keras`` (appears to be version 2.18.0)\
 
 ## Clone TensorFlow models repo into a 'models' directory.
 ``deactivate`` turns off the virtual environment\
@@ -32,13 +33,9 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``cd`` leave the yamnet folder\
 ``source snoreappENV/bin/activate`` reactivate the virtual environment\
 ``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
-``python yamnet_test.py``\
-If we see "Ran 4 tests ... OK ...", then we're all set.\
-if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras
-``cd``\
-``pip3 install tf-keras`` (appears to be version 2.18.0)\
-``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
 ``python yamnet_test.py`` run this to determine if working\
+If we see "Ran 4 tests ... OK ...", then we're all set.\
+if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras using ``pip3 install tf-keras``
 
 ## Now let's install the other elements needed to run the snore app
 pip3 install discord-webhook (appears to be version 1.3.1)
