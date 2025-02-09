@@ -20,22 +20,27 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``pip3 install tensorflow`` (appears to be version 2.18.0) (installs numpy at 2.0.2)\
 ``pip3 install soundfile`` (appears to be version 0.13.1)
 
-# Clone TensorFlow models repo into a 'models' directory.
-``deactivate`` turns off the virtual environment
-``git clone https://github.com/tensorflow/models.git``
-cd models/research/audioset/yamnet
-# Download data file into same directory as code.
-curl -O https://storage.googleapis.com/audioset/yamnet.h5
+## Clone TensorFlow models repo into a 'models' directory.
+``deactivate`` turns off the virtual environment\
+``git clone https://github.com/tensorflow/models.git`` this is a large file directly downloading the models from google\
+``cd models/research/audioset/yamnet``\
 
-# Installation ready, let's test it.
-python yamnet_test.py
-If we see "Ran 4 tests ... OK ...", then we're all set.
+## Download data file into same directory as code.
+``curl -O https://storage.googleapis.com/audioset/yamnet.h5``
+
+## Installation ready, let's test it.
+``cd`` leave the yamnet folder\
+``source snoreappENV/bin/activate`` reactivate the virtual environment\
+``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
+``python yamnet_test.py``\
+If we see "Ran 4 tests ... OK ...", then we're all set.\
 if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras
-pip3 install tf-keras (appears to be version 2.18.0)
-run python yamnet_test.py to determine if working
-# Now let's install the other elements needed to run the program
+``cd``\
+``pip3 install tf-keras`` (appears to be version 2.18.0)\
+``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
+``python yamnet_test.py`` run this to determine if working\
 
-
+## Now let's install the other elements needed to run the snore app
 pip3 install discord-webhook (appears to be version 1.3.1)
 pip3 install pyaudio (appears to be version 0.2.14)
 pip3 install matplotlib (appears to be version 3.10.0)
