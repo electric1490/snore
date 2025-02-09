@@ -1,5 +1,10 @@
 How to Install the Snore App:
 
+# Ensure that the Raspberry Pi is up to date.
+sudo apt-get update
+sudo apt-get upgrade
+sudo reboot
+
 # Upgrade pip first. Also make sure wheel is installed.
 python -m pip install --upgrade pip wheel
 
