@@ -7,7 +7,7 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``sudo reboot now``
 
 ## Upgrade pip first. Also make sure wheel is installed.
-``sudo apt-get install python3-pip -y``
+``sudo apt-get install python3-pip -y``\
 ``sudo apt-get install git -y``
 
 ## Create Virtual Environment
