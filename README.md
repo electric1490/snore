@@ -12,8 +12,10 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``sudo apt-get install portaudio19-dev -y``
 
 ### Create Virtual Environment
-``python -m venv snoreappENV``\
-``source snoreappENV/bin/activate``
+```
+python -m venv snoreappENV
+source snoreappENV/bin/activate
+```
 
 ### Install dependences.
 ``pip3 install numpy`` (appears to be version 2.0.2) (installed at 2.2.2)\
