@@ -13,10 +13,10 @@ python -m venv snoreappENV
 source snoreappENV/bin/activate
 
 # Install dependences.
-pip3 install numpy 
-pip3 install resampy 
+pip3 install numpy (appears to be version 2.0.2)
+pip3 install resampy (appears to be version 0.4.3)
 pip3 install tensorflow (appears to be version 2.18.0)
-pip3 install soundfile
+pip3 install soundfile (appears to be version 0.13.1)
 
 # Clone TensorFlow models repo into a 'models' directory.
 git clone https://github.com/tensorflow/models.git
