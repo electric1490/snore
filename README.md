@@ -1,22 +1,23 @@
 # How to Install the Snore App:
 
 ## Ensure that the Raspberry Pi is up to date.
+Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``sudo apt-get update``\
 ``sudo apt-get upgrade (need to elect 'Y')``\
 ``sudo reboot now``
 
 # Upgrade pip first. Also make sure wheel is installed.
-python -m pip install --upgrade pip wheel
+``sudo apt-get install python3-pip -y``
 
 # Create Virtual Environment
 ``python -m venv snoreappENV``\
 ``source snoreappENV/bin/activate``
 
 # Install dependences.
-pip3 install numpy (appears to be version 2.0.2)
-pip3 install resampy (appears to be version 0.4.3)
-pip3 install tensorflow (appears to be version 2.18.0)
-pip3 install soundfile (appears to be version 0.13.1)
+``pip3 install numpy`` (appears to be version 2.0.2) (installed at 2.2.2)\
+``pip3 install resampy`` (appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)\
+``pip3 install tensorflow`` (appears to be version 2.18.0) (installs numpy at 2.0.2)\
+``pip3 install soundfile`` (appears to be version 0.13.1)
 
 # Clone TensorFlow models repo into a 'models' directory.
 git clone https://github.com/tensorflow/models.git
