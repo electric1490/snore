@@ -21,6 +21,7 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ``pip3 install tensorflow`` (appears to be version 2.18.0) (installs numpy at 2.0.2)\
 ``pip3 install soundfile`` (appears to be version 0.13.1)\
 ``pip3 install tf-keras`` (appears to be version 2.18.0)\
+Can also be: ``pip3 install numpy resampy tensorflow soundfile tf-keras``
 
 ### Clone TensorFlow models repo into a 'models' directory.
 ``deactivate`` turns off the virtual environment\
