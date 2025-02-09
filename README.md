@@ -9,7 +9,7 @@ Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
 ## Upgrade pip first. Also make sure wheel is installed.
 ``sudo apt-get install python3-pip -y``\
 ``sudo apt-get install git -y``\
-``sudo apt-get install portaudio19-dev -y``\
+``sudo apt-get install portaudio19-dev -y``
 
 ## Create Virtual Environment
 ``python -m venv snoreappENV``\
@@ -44,8 +44,10 @@ if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras us
 ``pip3 install pyaudio`` (appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev)\
 ``pip3 install matplotlib`` (appears to be version 3.10.0)\
 ``pip3 install librosa`` (appears to be version 0.10.2)\
+``deactivate``
 
 ## Lets add in the custom python files for the app
+``curl -O https://github.com/electric1490/snore.git``
+``cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet`` load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed. 
 ``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
-``curl -O https://github.com/electric1490/snore/blob/bc3f2c306e326163cbf1e2aebc5309704ebb3f3f/yamnet_realtime_engine.py``
-Load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed. 
+``python yamnet_realtime_engine.py`` run the model
