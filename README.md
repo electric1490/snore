@@ -22,11 +22,13 @@ source snoreappENV/bin/activate
 ```
 
 ### Install dependences.
-``pip3 install numpy`` (appears to be version 2.0.2) (installed at 2.2.2)\
-``pip3 install resampy`` (appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)\
-``pip3 install tensorflow`` (appears to be version 2.18.0) (installs numpy at 2.0.2)\
-``pip3 install soundfile`` (appears to be version 0.13.1)\
-``pip3 install tf-keras`` (appears to be version 2.18.0)\
+```
+pip3 install numpy *(appears to be version 2.0.2) (installed at 2.2.2)*
+pip3 install resampy *(appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)*
+pip3 install tensorflow *(appears to be version 2.18.0) (installs numpy at 2.0.2)*
+pip3 install soundfile *(appears to be version 0.13.1)*
+pip3 install tf-keras *(appears to be version 2.18.0)*
+```
 Can also be: ``pip3 install numpy resampy tensorflow soundfile tf-keras``
 
 ### Clone TensorFlow models repo into a 'models' directory.
