@@ -1,7 +1,7 @@
 # How to Install the Snore App:
 
 ### Ensure that the Raspberry Pi is up to date.
-Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)\
+Working on a Raspberry Pi 4 running 64-bit OS (non-desktop)
 ```
 sudo apt-get update
 sudo apt-get upgrade (need to elect 'Y')
