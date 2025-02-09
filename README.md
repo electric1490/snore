@@ -21,8 +21,9 @@ curl -O https://storage.googleapis.com/audioset/yamnet.h5
 python yamnet_test.py
 # If we see "Ran 4 tests ... OK ...", then we're all set.
 
-# Now let's install the other 
+# Now let's install the other elements needed to run the program
 pip3 install tf-keras
 pip3 install discord-webhook
+pip3 install pyaudio
 
 Load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed. 
