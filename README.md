@@ -9,8 +9,8 @@
 python -m pip install --upgrade pip wheel
 
 # Create Virtual Environment
-python -m venv snoreappENV
-source snoreappENV/bin/activate
+``python -m venv snoreappENV``\
+``source snoreappENV/bin/activate``
 
 # Install dependences.
 pip3 install numpy (appears to be version 2.0.2)
