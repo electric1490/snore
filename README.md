@@ -40,26 +40,33 @@ cd models/research/audioset/yamnet
 ```
 
 ### Download data file into same directory as code.
-``curl -O https://storage.googleapis.com/audioset/yamnet.h5``
+```
+curl -O https://storage.googleapis.com/audioset/yamnet.h5
+```
 
 ### Core Tensorflow application now ready for testing.
-``cd`` leave the yamnet folder\
-``source snoreappENV/bin/activate`` reactivate the virtual environment\
-``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
-``python yamnet_test.py`` run this to determine if working\
-\
+```
+cd #leave the yamnet folder
+source snoreappENV/bin/activate #reactivate the virtual environment
+cd models/research/audioset/yamnet #navigate to the yamnet folder
+python yamnet_test.py #run this to determine if working
+```
 If we see "Ran 4 tests ... OK ...", then we're all set.\
 if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras using ``pip3 install tf-keras``
 
 ### Now let's install the other elements needed to run the snore app
-``pip3 install discord-webhook`` (appears to be version 1.3.1)\
-``pip3 install pyaudio`` (appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev)\
-``pip3 install matplotlib`` (appears to be version 3.10.0)\
-``pip3 install librosa`` (appears to be version 0.10.2)\
-``deactivate``
+```
+pip3 install discord-webhook (appears to be version 1.3.1)\
+pip3 install pyaudio (appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev)\
+pip3 install matplotlib (appears to be version 3.10.0)\
+pip3 install librosa (appears to be version 0.10.2)\
+deactivate
+```
 
 ### Lets add in the custom python files for the app
-``curl -O https://github.com/electric1490/snore.git``\
-``cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet`` load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed.\
-``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
-``python yamnet_realtime_engine.py`` run the model
+```
+curl -O https://github.com/electric1490/snore.git
+cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet #load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed.
+cd models/research/audioset/yamnet #navigate to the yamnet folder
+python yamnet_realtime_engine.py #run the model
+```
