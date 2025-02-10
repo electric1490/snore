@@ -57,7 +57,7 @@ if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras us
 ``deactivate``
 
 ### Lets add in the custom python files for the app
-``curl -O https://github.com/electric1490/snore.git``
-``cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet`` load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed. 
+``curl -O https://github.com/electric1490/snore.git``\
+``cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet`` load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed.\
 ``cd models/research/audioset/yamnet`` navigate to the yamnet folder\
 ``python yamnet_realtime_engine.py`` run the model
