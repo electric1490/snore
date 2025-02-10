@@ -32,10 +32,12 @@ pip3 install tf-keras *(appears to be version 2.18.0)*
 Can also be: ``pip3 install numpy resampy tensorflow soundfile tf-keras``
 
 ### Clone TensorFlow models repo into a 'models' directory.
-``deactivate`` turns off the virtual environment\
-``git clone https://github.com/electric1490/snore.git``\
-``git clone https://github.com/tensorflow/models.git`` this is a large file directly downloading the models from google\
-``cd models/research/audioset/yamnet``\
+```
+deactivate #turns off the virtual environment
+git clone https://github.com/electric1490/snore.git
+git clone https://github.com/tensorflow/models.git #this is a large file directly downloading the models from google
+cd models/research/audioset/yamnet
+```
 
 ### Download data file into same directory as code.
 ``curl -O https://storage.googleapis.com/audioset/yamnet.h5``
