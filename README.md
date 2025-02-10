@@ -25,18 +25,18 @@ source snoreappENV/bin/activate
 Simplified PIP install: ``pip3 install numpy resampy tensorflow soundfile tf-keras``\
 OR\
 ```
-pip3 install numpy *(appears to be version 2.0.2) (installed at 2.2.2)*
-pip3 install resampy *(appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)*
-pip3 install tensorflow *(appears to be version 2.18.0) (installs numpy at 2.0.2)*
-pip3 install soundfile *(appears to be version 0.13.1)*
-pip3 install tf-keras *(appears to be version 2.18.0)*
+pip3 install numpy            #*(appears to be version 2.0.2) (installed at 2.2.2)*
+pip3 install resampy          #*(appears to be version 0.4.3) (uninstalled numpy and reinstalled numpy at 2.1.3)*
+pip3 install tensorflow       #*(appears to be version 2.18.0) (installs numpy at 2.0.2)*
+pip3 install soundfile        #*(appears to be version 0.13.1)*
+pip3 install tf-keras         #*(appears to be version 2.18.0)*
 ```
 
 ### Clone TensorFlow models repo into a 'models' directory.
 ```
-deactivate #turns off the virtual environment
+deactivate                                              #turns off the virtual environment
 git clone https://github.com/electric1490/snore.git
-git clone https://github.com/tensorflow/models.git #this is a large file directly downloading the models from google
+git clone https://github.com/tensorflow/models.git      #this is a large file directly downloading the models from google
 cd models/research/audioset/yamnet
 ```
 
@@ -47,10 +47,10 @@ curl -O https://storage.googleapis.com/audioset/yamnet.h5
 
 ### Core Tensorflow application now ready for testing.
 ```
-cd #leave the yamnet folder
-source snoreappENV/bin/activate #reactivate the virtual environment
-cd models/research/audioset/yamnet #navigate to the yamnet folder
-python yamnet_test.py #run this to determine if working
+cd                                     #leave the yamnet folder
+source snoreappENV/bin/activate        #reactivate the virtual environment
+cd models/research/audioset/yamnet     #navigate to the yamnet folder
+python yamnet_test.py                  #run this to determine if working
 ```
 If we see "Ran 4 tests ... OK ...", then we're all set.\
 if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras using ``pip3 install tf-keras``
