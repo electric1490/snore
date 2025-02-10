@@ -57,6 +57,7 @@ if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras us
 
 ### Now let's install the other elements needed to run the snore app
 ```
+cd
 pip3 install discord-webhook (appears to be version 1.3.1)\
 pip3 install pyaudio (appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev)\
 pip3 install matplotlib (appears to be version 3.10.0)\
