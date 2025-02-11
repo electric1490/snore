@@ -72,3 +72,24 @@ cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet #load the 'ya
 cd models/research/audioset/yamnet #navigate to the yamnet folder
 python yamnet_realtime_engine.py #run the model
 ```
+### Lets make sure that the Raspberry Pi is using the correct hardware
+Execute ``arecord -1``\
+Take note of the Card #, the device #, and the subdevice #\
+navigate to ``cd /``
+then navigate to ``usr/share/alsa``
+then ``sudo nano alsa.conf`` and adjust the entry to match the output on ``arecord -l``
+
+```
+(snoreappENV) snore@snorelite:/usr/share/alsa $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 1: Device [USB PnP Sound Device], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+#then set alsa.conf to the below:
+
+defaults.ctl.card 1
+defaults.pcm.card 1
+defaults.pcm.device 0
+defaults.pcm.subdevice 0
+```
