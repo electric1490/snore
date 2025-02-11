@@ -78,6 +78,7 @@ Take note of the Card #, the device #, and the subdevice #\
 navigate to ``cd /``\
 then navigate to ``usr/share/alsa``\
 then ``sudo nano alsa.conf`` and adjust the entry to match the output on ``arecord -l``\
+example seen here:
 
 ```
 (snoreappENV) snore@snorelite:/usr/share/alsa $ arecord -l
@@ -86,7 +87,7 @@ card 1: Device [USB PnP Sound Device], device 0: USB Audio [USB Audio]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 
-#then set alsa.conf to the below:
+####then set alsa.conf to the below:
 
 defaults.ctl.card 1
 defaults.pcm.card 1
