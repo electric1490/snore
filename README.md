@@ -81,6 +81,8 @@ then ``sudo nano alsa.conf`` and adjust the entry to match the output on ``areco
 example seen here:
 
 ```
+#### output of running arecord -l in the terminal ####:
+
 (snoreappENV) snore@snorelite:/usr/share/alsa $ arecord -l
 **** List of CAPTURE Hardware Devices ****
 card 1: Device [USB PnP Sound Device], device 0: USB Audio [USB Audio]
