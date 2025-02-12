@@ -68,11 +68,12 @@ deactivate
 ### Lets add in the custom python files for the app
 ```
 cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet #load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed.
-cd models/research/audioset/yamnet #navigate to the yamnet folder
-python yamnet_realtime_engine.py #run the model
+cd models/research/audioset/yamnet                                 #navigate to the yamnet folder
+python yamnet_realtime_engine.py                                   #run the model
 ```
+
 ### Lets make sure that the Raspberry Pi is using the correct hardware
-Execute ``arecord -1``\
+Execute ``arecord -1`` to find the microphone card and device number\
 Take note of the Card #, the device #, and the subdevice #\
 navigate to ``cd /``\
 then navigate to ``usr/share/alsa``\
