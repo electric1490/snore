@@ -58,16 +58,15 @@ if it doesn't run because tf-keras was 3.8.0, it should downgrade to tf-keras us
 ### Now let's install the other elements needed to run the snore app
 ```
 cd
-pip3 install discord-webhook (appears to be version 1.3.1)\
-pip3 install pyaudio (appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev)\
-pip3 install matplotlib (appears to be version 3.10.0)\
-pip3 install librosa (appears to be version 0.10.2)\
+pip3 install discord-webhook #appears to be version 1.3.1
+pip3 install pyaudio #appears to be version 0.2.14) (this errored out in the intiial setup since it needed sudo apt-get install portaudio19-dev
+pip3 install matplotlib #appears to be version 3.10.0
+pip3 install librosa #appears to be version 0.10.2
 deactivate
 ```
 
 ### Lets add in the custom python files for the app
 ```
-###########(out)curl -O https://github.com/electric1490/snore.git
 cp snore/yamnet_realtime_engine.py models/research/audioset/yamnet #load the 'yamnet_realtime_engine.py' into the same folder where the 'inference.py' file is placed.
 cd models/research/audioset/yamnet #navigate to the yamnet folder
 python yamnet_realtime_engine.py #run the model
