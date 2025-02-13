@@ -14,14 +14,13 @@ logging.basicConfig(
     style="{",
     datefmt="%Y-%m-%d %H:%M")
 
-logging.info("Snore App Script Startup Initiated")
+logging.warning("App Script Startup Initiated")
 
 print('Loading Discord Webhook...')
 from discord_webhook import DiscordWebhook
 
 print('Loading TensorFlow...')
 import numpy as np
-#import scipy.signal
 import soundfile as sf
 import tensorflow as tf
 
@@ -37,9 +36,7 @@ print('Loading YAMNet Model Weights...')
 yamnet.load_weights('yamnet.h5')
 yamnet_classes = yamnet_model.class_names('yamnet_class_map.csv')
 
-
 print('Initializing PyAudio...')
-
 CHUNK = 1024 # frames_per_buffer # samples per chunk
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
@@ -58,6 +55,7 @@ print('YAMNET now detecting...')
 
 webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1337995743784599592/5kUrfH6NiMHQMVUrNgG3C3VqXa3KPpLbrtJE2PD8P1NkvB5Q4buoVGFvZ7wdB-g7wR00", rate_lmit_retry=True, content="RPi Snore Detection = Online")
 response = webhook.execute()
+logging.warning("Snore App Listening Loop Successfully Started")
 
 CHUNKs = []
 
@@ -65,9 +63,7 @@ with open('sed.npy', 'ab') as f:
     while True:
         try:
             stream.start_stream()
-
-            logging.info("Snore App Listening Loop Successfully Started")
-                
+            
             for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
                 data = stream.read(CHUNK)
                 CHUNKs.append(data)
@@ -89,7 +85,7 @@ with open('sed.npy', 'ab') as f:
                 webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1337995743784599592/5kUrfH6NiMHQMVUrNgG3C3VqXa3KPpLbrtJE2PD8P1NkvB5Q4buoVGFvZ7wdB-g7wR00", rate_lmit_retry=True, content="Snore Alert - Keep it Down!")
                 response = webhook.execute()
                 print(time.ctime().split()[3],''.join((f" {prediction[i]:.2f} {yamnet_classes[i][:7].ljust(7, '　')}" if prediction[i] >= THRESHOLD else '') for i in top5))
-                logging.info("Snore Detected - Discord Webhook Sent")
+                logging.warning("Snore Detected - Discord Webhook Sent")
                 
             else:
                 print(time.ctime().split()[3],''.join((f" {prediction[i]:.2f} {yamnet_classes[i][:7].ljust(7, '　')}" if prediction[i] >= THRESHOLD else '') for i in top5))
