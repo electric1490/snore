@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #place this in the same folder as the executable
-#/home/snore/models/research/audioset/yamnet
+#bash /home/snore/models/research/audioset/yamnet/startup_script.sh
 
 source snoreappENV/bin/activate
 
